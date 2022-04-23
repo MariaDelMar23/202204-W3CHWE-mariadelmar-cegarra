@@ -1,5 +1,6 @@
-import Component from "./components/Component.js";
+import AppComponent from "./components/AppComponent/AppComponent.js";
+import { getPokemons } from "./pokeapi.js";
 
 const { body } = document;
-// eslint-disable-next-line no-unused-vars
-const container = new Component(body, "div", "container");
+
+new AppComponent(body, getPokemons);

@@ -9,6 +9,7 @@ class ButtonComponent extends Component {
     this.src = src;
     this.alt = alt;
     this.element.addEventListener("click", action);
+    this.render()
   }
 
   render() {

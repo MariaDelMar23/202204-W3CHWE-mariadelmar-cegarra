@@ -1,5 +1,5 @@
-const offSet = 0;
-const limit = 20;
+let offSet = 0;
+let limit = 12;
 const pokemonSearched = "bulbasaur";
 
 export const getPokemons = async () => {
@@ -18,4 +18,22 @@ export const getPokemonSearched = async () => {
 
   const pokemonFound = await response.json();
   return pokemonFound;
+};
+
+export const bufferNextPokemons = async () => {
+  offSet += 12;
+  limit += 12;
+  const pokemonData = await getPokemons(offSet, limit);
+  return pokemonData;
+};
+
+export const getRelativeData = async (pokemonsPack12) => {
+  pokemonsPack12.results.map((pokemon) => pokemon.name);
+};
+
+export const bufferPreviousPokemons = async () => {
+  offSet -= 12;
+  limit -= 12;
+  const pokemonData = await getPokemons(offSet, limit);
+  return pokemonData;
 };

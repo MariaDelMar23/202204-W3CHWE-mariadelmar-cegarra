@@ -8,7 +8,7 @@ class PokemonsComponent extends Component {
 
     const ul = document.querySelector(".pokemons-list");
 
-    printPokemonsCards(ul, "pokemon__card", offSet);
+    printPokemonsCards(ul, "pokemon__card", offSet, false);
   }
 
 }

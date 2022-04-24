@@ -1,9 +1,6 @@
-* {
-  box-sizing: border-box;
-}
+
 body {
   background-color: #21dbdb;
-  position: absolute;
 }
 .pokemons-list {
   flex-wrap: nowrap;
@@ -19,6 +16,9 @@ body {
 .pokemon__name {
   height: 60px;
 }
+ul {
+  list-style-type: none;
+}
 .pokemon__picture {
   object-fit: cover;
   object-position: top;
@@ -27,9 +27,9 @@ body {
 .pokemon__card {
   position: relative;
   border: none;
-  background-color: #331c0e;
+  background-color: #3da2dd;
   color: #fff;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 5px rgba(0, 94, 117, 0.5);
 }
 .pokemon__overlay {
   border-radius: 0.25rem;

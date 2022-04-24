@@ -14,9 +14,16 @@ class AppComponent extends Component {
 
   render() {
     let offSet = 0;
-    this.element.innerHTML = `<header class="main-header">
-        <h1 class="main-title"><img src="images/pokemon-logo.svg" alt="Pokemon"></h1>
-      </header>
+    this.element.innerHTML = `
+    <header class="main-header">
+    <nav>
+      <a href="myPokemon.html">My Pokemons</a>
+      <section><h1 class="main-title"><img src="images/pokemon-logo.svg" alt="Pokemon"></h1></section>
+      <a href='pokemon-details?pokemonId=${Math.floor(
+        Math.random() * 1126 + 1
+      )}'>Random Pokemon</a>
+    </nav>
+  </header>
       <main class="main"> 
         <section class="pokemons">
           <h2 class="section-title">All Pokémons</h2>
@@ -31,9 +38,9 @@ class AppComponent extends Component {
     </section>
       </main>`;
 
-    const displayPokemonsSection = document.querySelector(".diplay-pokemons")
-    const buttonsInfoLeft = document.querySelector(".buttons-info__left")
-    const buttonsInfoRight = document.querySelector(".buttons-info__right")
+    const displayPokemonsSection = document.querySelector(".diplay-pokemons");
+    const buttonsInfoLeft = document.querySelector(".buttons-info__left");
+    const buttonsInfoRight = document.querySelector(".buttons-info__right");
     new PokemonsComponent(displayPokemonsSection, offSet);
     new ButtonComponent(
       buttonsInfoLeft,
@@ -61,6 +68,10 @@ class AppComponent extends Component {
         new PokemonsComponent(displayPokemonsSection, offSet);
       }
     );
+    const mainTitleSection = document.querySelector(".main-title");
+    mainTitleSection.addEventListener("click", () => {
+      window.location.href = `index`;
+    });
   }
 }
 

@@ -7,10 +7,6 @@ class DetailsPokemonComponent extends Component {
   constructor(parentElement, pokemonName) {
     super(parentElement, "section", "pokemon-details");
     this.pokemonName = pokemonName;
-    this.render(pokemonName);
-  }
-
-  render(pokemonName) {
     showDetails(pokemonName)
   }
 }

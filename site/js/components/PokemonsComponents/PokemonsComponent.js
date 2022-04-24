@@ -1,5 +1,6 @@
-import { printPokemonsCards } from "../../pokeapi.js";
+
 import Component from "../Component.js";
+import { printPokemonsCards } from "./PokemonsComponentUtils.js";
  
 class PokemonsComponent extends Component {
   constructor(parentElement, offSet) {
@@ -9,6 +10,7 @@ class PokemonsComponent extends Component {
 
     printPokemonsCards(ul, "pokemon__card", offSet);
   }
+
 }
 
 export default PokemonsComponent;

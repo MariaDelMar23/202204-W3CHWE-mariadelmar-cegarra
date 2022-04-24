@@ -6,7 +6,7 @@ class PokemonComponent extends Component {
     super(parentElement, "li", className);
     this.pokemon = pokemon;
     this.element.addEventListener("click", ()=>{
-      window.location.href = `pokemon-details?pokemonName=${pokemon.name}`;
+      window.location.href = `pokemon-details?pokemonName=${pokemon.id}`;
     })
     this.render(pokemon)
   }

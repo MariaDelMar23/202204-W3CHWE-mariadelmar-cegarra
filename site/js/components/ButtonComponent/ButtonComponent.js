@@ -1,20 +1,18 @@
 import Component from "../Component.js";
 
 class ButtonComponent extends Component {
-  src;
-  alt;
+  iconClassName;
 
-  constructor(parentElement, className, src, alt, action) {
+  constructor(parentElement, className, iconClassName, action) {
     super(parentElement, "button", className);
-    this.src = src;
-    this.alt = alt;
+    this.iconClassName = iconClassName;
     this.element.addEventListener("click", action);
     this.render()
   }
 
   render() {
     this.element.innerHTML = `
-      <img src="${this.src} " alt="${this.alt} ">
+    <i class="${this.iconClassName}"></i>
     `;
   }
 }

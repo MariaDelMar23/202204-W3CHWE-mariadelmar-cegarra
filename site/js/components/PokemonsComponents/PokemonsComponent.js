@@ -1,28 +1,14 @@
-import {
-  getApiObjectByUrl,
-  getPokemons,
-} from "../../pokeapi.js";
+import { printPokemonsCards } from "../../pokeapi.js";
 import Component from "../Component.js";
-
-
-const takePokemonsDeck = async (offSet) => {
-  const pokemonsDeckUnordered = []
-  const pokemons = await getPokemons(offSet);
-  await Promise.all(
-    pokemons.results.map(async (pokemon) => {
-      const pokemonData = await getApiObjectByUrl(pokemon.url);
-      pokemonsDeckUnordered.push(pokemonData)
-    })
-  );
-return pokemonsDeckUnordered;
-};
-
+ 
 class PokemonsComponent extends Component {
   constructor(parentElement, offSet) {
     super(parentElement, "ul", "pokemons-list");
-    takePokemonsDeck(offSet);
+
+    const ul = document.querySelector(".pokemons-list");
+
+    printPokemonsCards(ul, "pokemon__card", offSet);
   }
 }
-
 
 export default PokemonsComponent;

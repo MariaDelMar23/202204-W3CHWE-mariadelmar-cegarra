@@ -1,4 +1,3 @@
-import { allPokemonsObject } from "../../pokeapi.js";
 import ButtonComponent from "../ButtonComponent/ButtonComponent.js";
 import Component from "../Component.js";
 import PokemonsComponent from "../PokemonsComponents/PokemonsComponent.js";
@@ -32,7 +31,7 @@ class AppComponent extends Component {
         </section>
         <section class="buttons-info">
           <div class="buttons-info__left"></div>
-          <p class="info-page">${offSet} - ${offSet + 12} / ${allPokemonsObject.count}</p>
+          <p class="info-page">${offSet} - ${offSet + 12} / 898</p>
           <div class="buttons-info__right"></div>
         </section>
       </main>
@@ -64,7 +63,7 @@ class AppComponent extends Component {
         offSet += 12;
         document.querySelector(".info-page").textContent = `${offSet} - ${
           offSet + 12
-        } / ${allPokemonsObject.count}`;
+        } / 898`;
         new PokemonsComponent(displayPokemonsSection, offSet);
       }
     );

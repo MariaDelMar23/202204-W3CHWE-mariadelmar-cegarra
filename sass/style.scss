@@ -113,182 +113,182 @@ body {
         margin-left: 50px;
       }
     }
-    .pokemon-type {
-      font-style: normal;
-      left: 5px;
-      bottom: 5px;
-      color: #fff;
-      padding: 12px;
-      border-radius: 5px;
-      &__container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-      }
-      &--normal::before {
-        content: "Normal";
-        background-color: #a4acaf;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--fighting::before {
-        content: "Lucha";
-        background-color: #d56723;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--flying::before {
-        content: "Volador";
-        background-color: #5fd2f1;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--poison::before {
-        content: "Veneno";
-        background-color: #b97fc9;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--ground::before {
-        content: "Tierra";
-        background-color: #ab9842;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--rock::before {
-        content: "Roca";
-        background-color: #a38c21;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--bug::before {
-        content: "Bicho";
-        background-color: #729f3f;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--ghost::before {
-        content: "Fantasma";
-        background-color: #7b61a2;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--steel::before {
-        content: "Acero";
-        background-color: #9eb7b8;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--fire::before {
-        content: "Fuego";
-        background-color: #fd7d24;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--water::before {
-        content: "Agua";
-        background-color: #4592c4;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--grass::before {
-        content: "Planta";
-        background-color: #9bcc50;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--electric::before {
-        content: "Eléctrico";
-        background-color: #eed535;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--psychic::before {
-        content: "Psíquico";
-        background-color: #f366b9;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--ice::before {
-        content: "Hielo";
-        background-color: #5cdeff;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--dragon::before {
-        content: "Dragón";
-        background-color: #34e7cf;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--dark::before {
-        content: "Siniestro";
-        background-color: #1f5472;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--fairy::before {
-        content: "Hada";
-        background-color: #fdb9e9;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--unknown::before {
-        content: "Desconocido";
-        background-color: #7035fa;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-      &--shadow::before {
-        content: "Sombra";
-        background-color: #625474;
-        padding: 7px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-      }
-    }
   }
 }
 
+.pokemon-type {
+  font-style: normal;
+  left: 5px;
+  bottom: 5px;
+  color: #fff;
+  padding: 12px;
+  border-radius: 5px;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  &--normal::before {
+    content: "Normal";
+    background-color: #a4acaf;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--fighting::before {
+    content: "Lucha";
+    background-color: #d56723;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--flying::before {
+    content: "Volador";
+    background-color: #5fd2f1;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--poison::before {
+    content: "Veneno";
+    background-color: #b97fc9;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--ground::before {
+    content: "Tierra";
+    background-color: #ab9842;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--rock::before {
+    content: "Roca";
+    background-color: #5e4d03;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--bug::before {
+    content: "Bicho";
+    background-color: #729f3f;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--ghost::before {
+    content: "Fantasma";
+    background-color: #7b61a2;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--steel::before {
+    content: "Acero";
+    background-color: #9eb7b8;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--fire::before {
+    content: "Fuego";
+    background-color: #fd7d24;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--water::before {
+    content: "Agua";
+    background-color: #4592c4;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--grass::before {
+    content: "Planta";
+    background-color: #9bcc50;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--electric::before {
+    content: "Eléctrico";
+    background-color: #eed535;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--psychic::before {
+    content: "Psíquico";
+    background-color: #f366b9;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--ice::before {
+    content: "Hielo";
+    background-color: #5cdeff;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--dragon::before {
+    content: "Dragón";
+    background-color: #34e7cf;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--dark::before {
+    content: "Siniestro";
+    background-color: #1f5472;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--fairy::before {
+    content: "Hada";
+    background-color: #fdb9e9;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--unknown::before {
+    content: "Desconocido";
+    background-color: #7035fa;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  &--shadow::before {
+    content: "Sombra";
+    background-color: #625474;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+}
 .buttons-info {
   display: flex;
   flex-direction: row;
@@ -313,6 +313,67 @@ body {
   }
 }
 
+.pokemon-details {
+  text-align: center;
+  position: relative;
+  border: none;
+  background-color: #a3ddff;
+  color: rgb(0, 0, 0);
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 9px 20px 0px rgb(0 0 0 / 20%),
+    0px 10px 15px 10px rgb(0 0 0 / 0%);
+  .pokemon-img {
+    object-position: top;
+    height: 300px;
+    padding: 25px;
+    text-align: center;
+    width: 400px;
+  }
+}
+
+.chenge-buttons {
+  display: flex;
+  justify-content: center;
+}
+.button-back,
+.button-next {
+  background-color: #e66f00;
+  border: none;
+  border-radius: 20px;
+  padding: 8px;
+  padding-right: 15px;
+  padding-left: 15px;
+  color: #fff;
+  margin-left: 40px;
+  margin: 20px;
+}
+.button-add {
+  border: none;
+  background: none;
+  padding: 20px;
+  img {
+    width: 45px;
+    height: 45px;
+  }
+}
+.pokemon-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color:#fff;
+  ul {
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .details {
+    background-color: #6cac53;
+  }
+  .stats {
+    background-color: #f1a15f;
+  }
+}
 @keyframes slideIn {
   from {
     bottom: -15px;
@@ -339,7 +400,7 @@ body {
   background-color: gray;
   width: 400px;
   height: 50px;
-  position: fixed; /* Stay in place */
+  position: fixed;
   left: 40%;
   color: white;
   border-radius: 10px;

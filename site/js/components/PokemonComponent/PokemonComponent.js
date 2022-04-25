@@ -14,7 +14,9 @@ class PokemonComponent extends Component {
   render(pokemon, myPokemons) {
     this.element.innerHTML = `
     <img class="pokemon-img" src="${
-      pokemon.sprites.other.dream_world.front_default
+      (pokemon.sprites.other.dream_world.front_default !== null
+      ? pokemon.sprites.other.dream_world.front_default
+      : pokemon.sprites.other.home.front_default)
     }" alt="${pokemon.name}" class="pokemon-img">
     <h3 class="pokemon-name">${
       pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
@@ -60,7 +62,6 @@ class PokemonComponent extends Component {
       }
     );
     buttonAdd.element.innerHTML += `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Poké_Ball_icon.svg/1026px-Poké_Ball_icon.svg.png" alt="Catch pokemon">`;
-
     if (myPokemons) {
       buttonAdd.element.remove();
       new ButtonComponent(

@@ -22,7 +22,10 @@ export const showDetails = async (pokemonSearched) => {
   pokemonDetails.types.forEach((type) => {
     types.push(type.type.name);
   });
-  const imageFront = pokemonDetails.sprites.other.dream_world.front_default !== null ? pokemonDetails.sprites.other.dream_world.front_default : pokemonDetails.sprites.other.home.front_default;
+  const imageFront =
+    pokemonDetails.sprites.other.dream_world.front_default !== null
+      ? pokemonDetails.sprites.other.dream_world.front_default
+      : pokemonDetails.sprites.other.home.front_default;
   const hp = pokemonDetails.stats[0].base_stat;
   const attack = pokemonDetails.stats[1].base_stat;
   const deffense = pokemonDetails.stats[2].base_stat;
@@ -32,18 +35,25 @@ export const showDetails = async (pokemonSearched) => {
 
   const elementHTML = document.querySelector(".pokemon-details");
   elementHTML.innerHTML = `
+  <div class="container">
+  <div class="modal">
+      <p>El Pokemon ha sido añadido a "Mis Pokemon"</p>
+    </div>
   <header class="main-header">
   <nav>
-    <a href="myPokemon.html">My Pokemons</a>
-    <section><h1 class="main-title"><img src="images/pokemon-logo.svg" alt="Pokemon"></h1></section>
-    <a href='pokemon-details?pokemonId=${Math.floor(Math.random() * (1126) + 1)}'>Random Pokemon</a>
+  <section><h1 class="main-title"><img src="images/pokemon-logo.svg" alt="Pokemon"></h1></section>
+    <a href="myPokemon.html">Mis Pokémons</a>
+    <a href='pokemon-details?pokemonId=${Math.floor(
+      Math.random() * 898 + 1
+    )}'>Pokémon Aleatorio</a>
   </nav>
 </header>
 <main class="main"> 
+<section class="pokemons">
     <section class="change-buttons">
     </section>
-  <div class="title">
-    <h1 class="pokemon-name">${name}</h1>
+  <div class="section-title">
+    <h1 class="pokemon-name">${name.charAt(0).toUpperCase() + name.slice(1)}</h1>
     <h2 class="pokemon-id">${id}</h2>
   </div>
   <div class="images">
@@ -72,7 +82,9 @@ export const showDetails = async (pokemonSearched) => {
     <li class="details-info">Altura: ${height}</li>
     <li class="details-info">Peso: ${weight}</li>
   </ul>
+  </section>
   </main>
+  </div>
   `;
   const buttonSection = document.querySelector(".change-buttons");
   new ButtonComponent(
@@ -93,8 +105,11 @@ export const showDetails = async (pokemonSearched) => {
   );
 
   const titleSection = document.querySelector(".title");
-  new ButtonComponent(titleSection, "add-button", "pokemon-btn--details", () => sendPokemon(pokemonDetails));
+  new ButtonComponent(titleSection, "add-button", "pokemon-btn--details", () =>
+    sendPokemon(pokemonDetails)
+  );
   const mainTitleSection = document.querySelector(".main-title");
-    mainTitleSection.addEventListener("click", ()=>{
-      window.location.href = `index`})
+  mainTitleSection.addEventListener("click", () => {
+    window.location.href = `index`;
+  });
 };

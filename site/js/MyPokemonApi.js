@@ -34,3 +34,11 @@ export const editPokemon = async (id, pokemonEdited) => {
   
   return response.json();
 };
+
+export const getMyPokemonSearched = async (pokemonSearched) => {
+  const response = await fetch(
+    `${apiUrl}/${pokemonSearched}`
+  );
+  const pokemonFound = await response.json();
+  return pokemonFound;
+};

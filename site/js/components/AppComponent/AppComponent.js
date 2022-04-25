@@ -15,30 +15,30 @@ class AppComponent extends Component {
   render() {
     let offSet = 0;
     this.element.innerHTML = `
+    <div class="modal">
+      <p>El Pokemon ha sido añadido a "Mis Pokemon"</p>
+    </div>
     <header class="main-header">
     <nav>
-      <a href="myPokemon.html">My Pokemons</a>
-      <section><h1 class="main-title"><img src="images/pokemon-logo.svg" alt="Pokemon"></h1></section>
-      <a href='pokemon-details?pokemonId=${Math.floor(
-        Math.random() * 1126 + 1
-      )}'>Random Pokemon</a>
+    <section><h1 class="main-title"><img src="images/pokemon-logo.svg" alt="Pokemon"></h1></section>
+      <a href="myPokemon.html">Mis Pokémons</a>
+      <a href='pokemon-details?pokemonId=${Math.floor(Math.random() * (898) + 1)}'>Pokémon Aleatorio</a>
     </nav>
   </header>
       <main class="main"> 
         <section class="pokemons">
-          <h2 class="section-title">All Pokémons</h2>
-          <section class="diplay-pokemons"></section>
-          <section class="buttons-info">
+          <h2 class="section-title">Todos los Pokémons</h2>
+          <section class="display-pokemons"></section> 
+        </section>
+        <section class="buttons-info">
           <div class="buttons-info__left"></div>
-          <p class="info-page">${offSet} - ${offSet + 12} / ${
-      allPokemonsObject.count
-    }</p>
-    <div class="buttons-info__right"></div>
-    </section>
-    </section>
-      </main>`;
+          <p class="info-page">${offSet} - ${offSet + 12} / ${allPokemonsObject.count}</p>
+          <div class="buttons-info__right"></div>
+        </section>
+      </main>
+      `;
 
-    const displayPokemonsSection = document.querySelector(".diplay-pokemons");
+    const displayPokemonsSection = document.querySelector(".display-pokemons");
     const buttonsInfoLeft = document.querySelector(".buttons-info__left");
     const buttonsInfoRight = document.querySelector(".buttons-info__right");
     new PokemonsComponent(displayPokemonsSection, offSet);
@@ -51,7 +51,7 @@ class AppComponent extends Component {
         offSet -= 12;
         document.querySelector(".info-page").textContent = `${offSet} - ${
           offSet + 12
-        } / ${allPokemonsObject.count}`;
+        } / 898`;
         new PokemonsComponent(displayPokemonsSection, offSet);
       }
     );
